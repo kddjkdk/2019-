@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#093450"
+    tools:context=".MyPagea">
+
+    <ImageButton
+        android:id="@+id/home"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:onClick="hom"
+        android:padding="0sp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/login_com"
+        android:layout_width="89dp"
+        android:layout_height="20dp"
+        android:layout_margin="0dp"
+        android:background="#0F6796"
+        android:onClick="lo_co"
+        android:text="로그인/회원가입"
+        android:textColor="#FFFFFF"
+        android:textSize="25px"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <Button
+        android:id="@+id/login_com3"
+        android:layout_width="89dp"
+        android:layout_height="20dp"
+        android:layout_margin="0dp"
+        android:background="#FFFFFF"
+        android:textColor="#FFFFFF"
+        android:textSize="25px"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <Button
+        android:id="@+id/login_com2"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:layout_margin="0dp"
+        android:background="#0F6796"
+        android:text="검색"
+        android:textColor="#FFFFFF"
+        android:textSize="25px"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.958"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <Button
+        android:id="@+id/Mypage"
+        android:layout_width="102.75dp"
+        android:layout_height="55dp"
+        android:background="#0F6796"
+        android:backgroundTintMode="add"
+        android:onClick="myp"
+
+        android:text="마이페이지"
+        android:textColor="#FFFFFF"
+        android:textSize="35px"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.201" />
+
+    <Button
+        android:id="@+id/Streaming"
+        android:layout_width="102.75dp"
+        android:layout_height="55dp"
+        android:background="#0F6796"
+        android:onClick="stream"
+        android:text="스트리밍"
+        android:textColor="#FFFFFF"
+        android:textSize="35px"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.334"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.201" />
+
+    <Button
+        android:id="@+id/persrec"
+        android:layout_width="102.75dp"
+        android:layout_height="55dp"
+        android:background="#0F6796"
+        android:onClick="Pers"
+        android:text="구매/추천"
+        android:textColor="#FFFFFF"
+        android:textSize="35px"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.668"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.201" />
+
+    <Button
+        android:id="@+id/comu"
+        android:layout_width="102.75dp"
+        android:layout_height="55dp"
+        android:background="#0F6796"
+        android:onClick="comu"
+        android:text="커뮤니티"
+        android:textColor="#FFFFFF"
+        android:textSize="35px"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.201" />
+
+    <TextView
+        android:layout_width="90dp"
+        android:layout_height="26dp"
+        android:text="구매내역 >"
+        android:textColor="#FFFFFF"
+        android:textSize="50px"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.33" />
+
+    <Button
+        android:id="@+id/Editsin"
+        android:layout_width="89dp"
+        android:layout_height="20dp"
+        android:layout_margin="0dp"
+        android:background="#0F6796"
+        android:onClick="edits"
+        android:text="내정보수정"
+        android:textColor="#FFFFFF"
+        android:textSize="25px"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.33" />
+
+    <ImageButton
+        android:id="@+id/ma1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:padding="0sp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ma"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.48" />
+
+    <ImageButton
+        android:id="@+id/ba1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:padding="0sp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ba"
+        android:onClick="bag"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.355"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.48" />
+
+    <ImageButton
+        android:id="@+id/wi1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:padding="0sp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/wi"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.66"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.48" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.952"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.480" />
+
+
+    <TextView
+        android:layout_width="140dp"
+        android:layout_height="26dp"
+        android:text="내가 쓴 게시물 >"
+        android:onClick="mycomu"
+        android:textColor="#FFFFFF"
+        android:textSize="50px"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.668" />
+
+    <Button
+        android:id="@+id/mycomu"
+        android:layout_width="351dp"
+        android:layout_height="138dp"
+        android:text="게시한 게시글이 없습니다."
+        android:textColor="#FFFFFF"
+        android:textSize="35px"
+        android:onClick="mycomu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.500"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.920" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top" />
+
+
+</android.support.constraint.ConstraintLayout>

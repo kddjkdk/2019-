@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#093450"
+    tools:context=".BattleG">
+
+    <ImageButton
+        android:id="@+id/home"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:onClick="hom"
+        android:padding="0sp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/login_com"
+        android:layout_width="89dp"
+        android:layout_height="20dp"
+        android:layout_margin="0dp"
+        android:background="#0F6796"
+        android:onClick="lo_co"
+        android:text="로그인/회원가입"
+        android:textColor="#FFFFFF"
+        android:textSize="25px"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <Button
+        android:id="@+id/login_com3"
+        android:layout_width="89dp"
+        android:layout_height="20dp"
+        android:layout_margin="0dp"
+        android:background="#FFFFFF"
+        android:textColor="#FFFFFF"
+        android:textSize="25px"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <Button
+        android:id="@+id/login_com2"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:layout_margin="0dp"
+        android:background="#0F6796"
+        android:text="검색"
+        android:textColor="#FFFFFF"
+        android:textSize="25px"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.958"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <Button
+        android:id="@+id/Mypage"
+        android:layout_width="102.75dp"
+        android:layout_height="55dp"
+        android:background="#0F6796"
+        android:backgroundTintMode="add"
+        android:onClick="myp"
+
+        android:text="마이페이지"
+        android:textColor="#FFFFFF"
+        android:textSize="35px"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.201" />
+
+    <Button
+        android:id="@+id/Streaming"
+        android:layout_width="102.75dp"
+        android:layout_height="55dp"
+        android:background="#0F6796"
+        android:onClick="stream"
+        android:text="스트리밍"
+        android:textColor="#FFFFFF"
+        android:textSize="35px"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.334"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.201" />
+
+    <Button
+        android:id="@+id/persrec"
+        android:layout_width="102.75dp"
+        android:layout_height="55dp"
+        android:background="#0F6796"
+        android:onClick="Pers"
+        android:text="구매/추천"
+        android:textColor="#FFFFFF"
+        android:textSize="35px"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.668"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.201" />
+
+    <Button
+        android:id="@+id/comu"
+        android:layout_width="102.75dp"
+        android:layout_height="55dp"
+        android:background="#0F6796"
+        android:onClick="comu"
+        android:text="커뮤니티"
+        android:textColor="#FFFFFF"
+        android:textSize="35px"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.201" />
+
+    <ImageView
+        android:id="@+id/ba1"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.071"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.415"
+        app:srcCompat="@drawable/ba" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="20dp"
+        android:background="#0F6796"
+        android:gravity="center_horizontal"
+        android:scaleType="centerCrop"
+        android:text="PlayerUnKnown's BattleGround"
+        android:textColor="#FFFFFF"
+        android:textSize="35px"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.351" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="200dp"
+        android:layout_height="20dp"
+        android:background="#0F6796"
+        android:gravity="center_horizontal"
+        android:scaleType="centerCrop"
+        android:text="FPS, MMO슈팅, 액션, 배틀로얄"
+        android:textColor="#FFFFFF"
+        android:textSize="35px"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.403" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="200dp"
+        android:layout_height="20dp"
+        android:background="#0F6796"
+        android:gravity="center_horizontal"
+        android:scaleType="centerCrop"
+        android:text="평점 : ★★★★☆"
+        android:textColor="#FFFFFF"
+        android:textSize="35px"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.455" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="200dp"
+        android:layout_height="20dp"
+        android:background="#0F6796"
+        android:gravity="center_horizontal"
+        android:scaleType="centerCrop"
+        android:text="제작 : PUBG"
+        android:textColor="#FFFFFF"
+        android:textSize="35px"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.97"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.506" />
+
+    <ImageView
+        android:id="@+id/ba2"
+        android:layout_width="340dp"
+        android:layout_height="60dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/backg"
+        app:layout_constraintBottom_toBottomOf="@+id/ne"
+        app:layout_constraintEnd_toEndOf="@+id/ne"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="@+id/ne"
+        app:layout_constraintTop_toTopOf="@+id/ne"
+        app:layout_constraintVertical_bias="0.620" />
+
+    <TextView
+        android:id="@+id/ne"
+        android:layout_width="340dp"
+        android:layout_height="46dp"
+        android:scaleType="centerCrop"
+        android:text="최후의 1명이 될 때 까지 싸워라!
+PlayerUnKnown’s BattleGround는 100명의 유저들이 한 지역에 모여서 최후의 생존자가 될
+때 까지 싸우는 게임입니다. 계속 전투를 하여 생존자를 줄일껀지 혹은 전투를 피하며 마지막에
+남은 생존자를 처리할껀지 그것은 당신의 선택입니다! 어떻게든 살아남으세요"
+        android:textColor="#FFFFFF"
+        android:textSize="25px"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.630" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="26dp"
+        android:text="관련영상"
+        android:textColor="#FFFFFF"
+        android:textSize="50px"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.710" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/p1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.780" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/p2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.780" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/p3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.902"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.780" />
+
+    <ImageView
+        android:id="@+id/ba3"
+        android:layout_width="340dp"
+        android:layout_height="60dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/backg"
+        app:layout_constraintBottom_toBottomOf="@+id/ne2"
+        app:layout_constraintEnd_toEndOf="@+id/ne2"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="@+id/ne2"
+        app:layout_constraintTop_toTopOf="@+id/ne2"
+        app:layout_constraintVertical_bias="0.900" />
+
+    <TextView
+        android:id="@+id/ne2"
+        android:layout_width="340dp"
+        android:layout_height="46dp"
+        android:scaleType="centerCrop"
+        android:text="[4h] 김진원 : 이 게임 너무 어려운데 그래도 계속 해보니까 재미있어요ㅋㅋ"
+        android:textColor="#FFFFFF"
+        android:textSize="25px"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.436"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.900" />
+
+    <TextView
+        android:id="@+id/ne2"
+        android:layout_width="340dp"
+        android:layout_height="46dp"
+        android:scaleType="centerCrop"
+        android:text="[1100h] 하승호 : 계속 하다보니까 1000시간 넘겼네요.."
+        android:textColor="#FFFFFF"
+        android:textSize="25px"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.436"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.918" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_margin="0dp"
+        android:background="#0F6796"
+        android:text="구매"
+        android:textColor="#FFFFFF"
+        android:textSize="25px"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.635"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_margin="0dp"
+        android:background="#0F6796"
+        android:text="이전"
+        android:textColor="#FFFFFF"
+        android:textSize="25px"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.364"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977" />
+
+</android.support.constraint.ConstraintLayout>
