@@ -2,7 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myapplication">
 
+    <!--인터넷 권한 선언-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -10,19 +14,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity android:name=".edit_p" />
-        <activity android:name=".sing_up" />
+        <activity android:name=".RegisterActivity" />
         <activity android:name=".BattleG" />
         <activity android:name=".Comunitya_mycomu" />
         <activity android:name=".Communitya" />
         <activity android:name=".Perchasea" />
         <activity android:name=".Streaminga" />
         <activity android:name=".MyPagea" />
-        <activity android:name=".logina" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".logina" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity">
+
         </activity>
     </application>
 

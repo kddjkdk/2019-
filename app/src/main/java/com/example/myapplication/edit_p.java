@@ -32,7 +32,7 @@ public class edit_p extends AppCompatActivity implements View.OnClickListener {
                         .show();
                 break;
 
-            case R.id.cancel:
+            case R.id.register:
                 this.finish();
                 break;
         }
