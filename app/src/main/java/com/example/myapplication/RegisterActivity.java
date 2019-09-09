@@ -3,6 +3,7 @@ package com.example.myapplication;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,21 +19,21 @@ import org.json.JSONObject;
 public class RegisterActivity extends AppCompatActivity{
 
     DBHelper dbHelper = new DBHelper(this);
-    String id, pw, name, phone, email; // editText
-    EditText e_id,e_pw,e_name,e_phone,e_email;
-
+    private EditText e_id,e_pw,e_name,e_phone,e_email;
+    private Button cancel;
     @Override
     protected void onCreate(Bundle savedInstanceState) { // 액티비티 시작 시 처음으로 실행되는 생명주기
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+        // 아이디 값 찾기
         e_id = (EditText)findViewById(R.id.id);
         e_pw = (EditText)findViewById(R.id.pw);
         e_name = (EditText)findViewById(R.id.name);
         e_phone = (EditText)findViewById(R.id.phone);
         e_email = (EditText)findViewById(R.id.email);
 
-        Button cancel = (Button)findViewById(R.id.cancel);
+        cancel = (Button)findViewById(R.id.cancel);
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -45,6 +46,8 @@ public class RegisterActivity extends AppCompatActivity{
 
     public void onComplete(View v){
 
+        final String id, pw, name, phone, email; // editText
+        //EditText에 현재 입력되는 값을 가져옴
         id = e_id.getText().toString();
         pw = e_pw.getText().toString();
         name = e_name.getText().toString();
@@ -54,12 +57,15 @@ public class RegisterActivity extends AppCompatActivity{
         Response.Listener<String> responseListener = new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+                response =response.replace(".",":");
                 //제이슨, 에이젝슨사용... 운반할때 포장해서 넘겨줌. 받을때 포장을 풀어줌:  파싱
+                Log.v(response, "----response----");
                     try {
-                        JSONObject jsonobject = new JSONObject(response);   // 성공 여부 알기위해사용
-                        boolean success = jsonobject.getBoolean("success");     // 서버통신 성공 여부 알려줌
+                        JSONObject jsonObject = new JSONObject(response);               // 성공 여부 알기위해사용
+                        boolean success = jsonObject.getBoolean("success");     // 서버통신 성공 여부 알려줌
                         if (success) {
                             Toast.makeText(getApplicationContext(), "회원등록 성공", Toast.LENGTH_SHORT).show();
+                            Log.e("push", "push");
                             Intent intent = new Intent(RegisterActivity.this, logina.class);
                             startActivity(intent);
                         } else { // 회원등록에 실패한 경우
@@ -68,10 +74,10 @@ public class RegisterActivity extends AppCompatActivity{
                         }
                     } catch (JSONException e) {
                         e.printStackTrace();
+                        Log.e("push", "error");
                     }
             }
         };
-
         RegisterRequest registerRequest = new RegisterRequest(id, pw, name, phone, email, responseListener);
         RequestQueue queue = Volley.newRequestQueue(RegisterActivity.this);
         queue.add(registerRequest);

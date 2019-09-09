@@ -13,7 +13,8 @@ public class RegisterRequest extends StringRequest {
     final static private String URL = "http://giantstar115.dothome.co.kr/Register.php";
     private Map<String, String> map;
 
-    public RegisterRequest(String id, String password, String name, String phoneNumber, String email, Response.Listener<String> listener) {
+    public RegisterRequest(String id, String  password, String name, String phoneNumber, String email,
+                           Response.Listener<String> listener) {
         super(Method.POST, URL, listener, null);
 
         map = new HashMap<>();

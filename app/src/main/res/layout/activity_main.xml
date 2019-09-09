@@ -7,21 +7,21 @@
     tools:context=".MainActivity"
     android:background="#093450"
     >
-    <!--<ImageButton--> 이미지가 포함된 버튼, 일번버튼은 Button, TextView는 글자
-    <!--android:id="@+id/home"--> 개체 id(HTML에 id개념하고 같다)
-    <!--android:layout_width="110dp"--> 아이콘 넓이
-    <!--android:layout_height="110dp"--> 아이콘 길이
-    <!--android:padding="0sp"--> 패딩크기
-    <!--android:scaleType="centerCrop"--> 이미지 아이콘을 가운데로 맞춰줌(안쓰면 크기 조절할때 이미지가 이상하게 잘림)
-    <!--android:src="@drawable/logo"--> 이미지 이름(위치 app > res > drawable 이미지를 사용할 때 여기 넣어야함)
-    <!--android:onClick="hom"--> 클릭할 때 넘어 가려는 이벤트(이벤트 처리부분은 MainActivity.java에 있음)
-    <!--app:layout_constraintBottom_toBottomOf="parent"--> 1
-    <!--app:layout_constraintHorizontal_bias="0.498"--> 0~1까지 가로 위치를 비율로 따짐(ex 0.5에 있으면 가로 가운데 위치한거)
-    <!--app:layout_constraintLeft_toLeftOf="parent"--> 2
-    <!--app:layout_constraintRight_toRightOf="parent"--> 3
-    <!--app:layout_constraintTop_toTopOf="parent"--> 4 1,2,3,4 이거는 뭘 뜻하는지는 모르는데 아이콘 위치 옮기려면 필수다. 꼭 넣어라
-    <!--app:layout_constraintVertical_bias="0.0" />-->  0~1까지 세로 위치를 비율로 따짐(0.5에 있으면 세로 가운데 위치한거)
-
+    <!--<ImageButton                        이미지가 포함된 버튼, 일번버튼은 Button, TextView는 글자
+    android:id="@+id/home"              개체 id(HTML에 id개념하고 같다)
+    android:layout_width="110dp"        아이콘 넓이
+    android:layout_height="110dp"       아이콘 길이
+    android:padding="0sp"               패딩크기
+    android:scaleType="centerCrop"      이미지 아이콘을 가운데로 맞춰줌(안쓰면 크기 조절할때 이미지가 이상하게 잘림)
+    android:src="@drawable/logo"        이미지 이름(위치 app > res > drawable 이미지를 사용할 때 여기 넣어야함)
+    android:onClick="hom"               클릭할 때 넘어 가려는 이벤트(이벤트 처리부분은 MainActivity.java에 있음)
+    app:layout_constraintBottom_toBottomOf="parent"  1
+    app:layout_constraintHorizontal_bias="0.498" 0~1까지 가로 위치를 비율로 따짐(ex 0.5에 있으면 가로 가운데 위치한거)
+    app:layout_constraintLeft_toLeftOf="parent"    2
+    app:layout_constraintRight_toRightOf="parent"  3
+    app:layout_constraintTop_toTopOf="parent" 4 1,2,3,4 이거는 뭘 뜻하는지는 모르는데 아이콘 위치 옮기려면 필수다. 꼭 넣어라
+    app:layout_constraintVertical_bias="0.0" />  0~1까지 세로 위치를 비율로 따짐(0.5에 있으면 세로 가운데 위치한거)
+-->
     <ImageButton
         android:id="@+id/home"
         android:layout_width="110dp"
@@ -36,7 +36,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
-
+ <!--
     <Button
         android:id="@+id/login_com"
         android:layout_width="89dp"
@@ -54,6 +54,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.05" />
+ -->
 
     <Button
         android:id="@+id/login_com3"
@@ -281,5 +282,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="top" />
+
+    <TextView
+        android:id="@+id/tv_id"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="TextView"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/login_com3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/home"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

@@ -43,13 +43,13 @@ public class logina extends AppCompatActivity {
                             boolean success = jsonObject.getBoolean("success");     // 서버통신 성공 여부 알려줌
                             if (success) {
                                  // 서버로부터 id, pw 검사
-                                String userID= jsonObject.getString("ID");
-                                String userPass= jsonObject.getString("Password");
+                                String userID= jsonObject.getString("id");
+                                String userPass= jsonObject.getString("password");
                                  Toast.makeText(getApplicationContext(), "로그인 성공",Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(logina.this, MainActivity.class);
                                 // 넣은 값들 가지고 다음페이지로...
-                                intent.putExtra("ID", userID);
-                                intent.putExtra("Pass", userPass);
+                                intent.putExtra("id", userID);
+                                intent.putExtra("password", userPass);
                             } else { // 회원등록에 실패한 경우
                                 Toast.makeText(getApplicationContext(), "로그인 실패", Toast.LENGTH_SHORT).show();
                                 return;
