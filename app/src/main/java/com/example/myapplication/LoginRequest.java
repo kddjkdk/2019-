@@ -10,7 +10,7 @@ import java.util.Map;
 public class LoginRequest extends StringRequest {
 
     //서버 url 설정  ... php에 저장한 php파일과 연동
-    final static private String URL = "http://giantstar115.dothome.co.kr/Login.php";
+    final static private String URL = "http://giantstar115.dothome.co.kr/html/Login.php";
     private Map<String, String> map;
 
     public LoginRequest(String id, String password, Response.Listener<String> listener) {

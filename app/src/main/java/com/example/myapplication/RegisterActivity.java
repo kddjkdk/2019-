@@ -18,31 +18,29 @@ import org.json.JSONObject;
 
 public class RegisterActivity extends AppCompatActivity{
 
-    DBHelper dbHelper = new DBHelper(this);
     private EditText e_id,e_pw,e_name,e_phone,e_email;
     private Button cancel;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) { // 액티비티 시작 시 처음으로 실행되는 생명주기
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
         // 아이디 값 찾기
-        e_id = (EditText)findViewById(R.id.id);
-        e_pw = (EditText)findViewById(R.id.pw);
-        e_name = (EditText)findViewById(R.id.name);
-        e_phone = (EditText)findViewById(R.id.phone);
-        e_email = (EditText)findViewById(R.id.email);
+        e_id = findViewById(R.id.id);
+        e_pw = findViewById(R.id.pw);
+        e_name = findViewById(R.id.name);
+        e_phone = findViewById(R.id.phone);
+        e_email = findViewById(R.id.email);
 
-        cancel = (Button)findViewById(R.id.cancel);
+        cancel = findViewById(R.id.cancel);
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
-
         });
     }
-
 
     public void onComplete(View v){
 
@@ -57,11 +55,18 @@ public class RegisterActivity extends AppCompatActivity{
         Response.Listener<String> responseListener = new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                response =response.replace(".",":");
                 //제이슨, 에이젝슨사용... 운반할때 포장해서 넘겨줌. 받을때 포장을 풀어줌:  파싱
-                Log.v(response, "----response----");
+                Log.d(response, "----response----");
+                Log.d(id,"id");
+                Log.d(pw,"pw");
+                Log.d(name,"name");
+                Log.d(phone,"phone");
+                Log.d(email,"email");
+
                     try {
+                        Log.d(response, "----response----");
                         JSONObject jsonObject = new JSONObject(response);               // 성공 여부 알기위해사용
+                        Log.d(jsonObject.toString(), "----jsonObject----");
                         boolean success = jsonObject.getBoolean("success");     // 서버통신 성공 여부 알려줌
                         if (success) {
                             Toast.makeText(getApplicationContext(), "회원등록 성공", Toast.LENGTH_SHORT).show();
@@ -74,22 +79,18 @@ public class RegisterActivity extends AppCompatActivity{
                         }
                     } catch (JSONException e) {
                         e.printStackTrace();
-                        Log.e("push", "error");
+                        Log.d("hihi", "error");
                     }
             }
         };
         RegisterRequest registerRequest = new RegisterRequest(id, pw, name, phone, email, responseListener);
         RequestQueue queue = Volley.newRequestQueue(RegisterActivity.this);
         queue.add(registerRequest);
-
     }
-
-
     public void hom(View v){ // 클릭이벤트. 버튼에 OnClick하고 이름을 맞춰줘야한다
         Intent intent001 = new Intent(this,MainActivity.class); // Intent라는 함수 사용법. Intent intent이름 = new Intent(this,불러올페이지이름.class)
         startActivity(intent001); // intent이름 을 시작하겠다.
-    }// 만약 추가하고싶다면 java > com.example.myapplication에 마우스 오른쪽버튼 new > activity로 추가하면됨.
-
+    }       // 만약 추가하고싶다면 java > com.example.myapplication에 마우스 오른쪽버튼 new > activity로 추가하면됨.
     public void lo_co(View v){
         Intent intent002 = new Intent(this,logina.class);
         startActivity(intent002);

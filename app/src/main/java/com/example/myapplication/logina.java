@@ -37,7 +37,7 @@ public class logina extends AppCompatActivity {
 
                 Response.Listener<String> responseListener = new Response.Listener<String>(){
                     @Override
-                    public void onResponse(String response){
+                    public void onResponse(String response) {
                         try {
                             JSONObject jsonObject = new JSONObject(response);   // 성공 여부 알기위해사용
                             boolean success = jsonObject.getBoolean("success");     // 서버통신 성공 여부 알려줌
@@ -45,9 +45,10 @@ public class logina extends AppCompatActivity {
                                  // 서버로부터 id, pw 검사
                                 String userID= jsonObject.getString("id");
                                 String userPass= jsonObject.getString("password");
-                                 Toast.makeText(getApplicationContext(), "로그인 성공",Toast.LENGTH_SHORT).show();
+
+                                Toast.makeText(getApplicationContext(), "로그인 성공",Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(logina.this, MainActivity.class);
-                                // 넣은 값들 가지고 다음페이지로...
+                                // 넣은 값들 가지고 다음페이지로 넘겨준다.
                                 intent.putExtra("id", userID);
                                 intent.putExtra("password", userPass);
                             } else { // 회원등록에 실패한 경우
@@ -65,9 +66,6 @@ public class logina extends AppCompatActivity {
             }
         });
     }
-
-
-
 
     public void hom(View v){ // 클릭이벤트. 버튼에 OnClick하고 이름을 맞춰줘야한다
         Intent intent001 = new Intent(this,MainActivity.class); // Intent라는 함수 사용법. Intent intent이름 = new Intent(this,불러올페이지이름.class)
