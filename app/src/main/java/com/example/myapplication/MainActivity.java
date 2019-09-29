@@ -15,15 +15,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main); //일반적인 안드로이드 필수 코딩. 건들면안됨
 
-        tv_id = findViewById(R.id.id);
-        tv_pass = findViewById(R.id.pw);
+        tv_id = findViewById(R.id.et_id);
+        tv_pass = findViewById(R.id.et_pw);
 
+        // intent로 넘기는 값들을 받아줌
         Intent intent = getIntent();
-        String id = intent.getStringExtra("ID");
-        String pw = intent.getStringExtra("Pass");
+        String userID = intent.getStringExtra("userID");
+        String userPass = intent.getStringExtra("userPass");
 
-        tv_id.setText(id);
-        tv_pass.setText(pw);
+        tv_id.setText(userID);
+        tv_pass.setText(userPass);
     }
     public void hom(View v){ // 클릭이벤트. 버튼에 OnClick하고 이름을 맞춰줘야한다
         Intent intent001 = new Intent(this,MainActivity.class); // Intent라는 함수 사용법. Intent intent이름 = new Intent(this,불러올페이지이름.class)
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     }// 만약 추가하고싶다면 java > com.example.myapplication에 마우스 오른쪽버튼 new > activity로 추가하면됨.
 
     public void lo_co(View v){
-        Intent intent002 = new Intent(this,logina.class);
+        Intent intent002 = new Intent(this, LoginActivity.class);
         startActivity(intent002);
     }
     public void myp(View v){

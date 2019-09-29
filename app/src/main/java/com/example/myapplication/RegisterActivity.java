@@ -1,9 +1,9 @@
 package com.example.myapplication;
 
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,10 +16,10 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class RegisterActivity extends AppCompatActivity{
+public class RegisterActivity extends AppCompatActivity {
 
-    private EditText e_id,e_pw,e_name,e_phone,e_email;
-    private Button cancel;
+    private EditText et_id, et_pw, et_name, et_phone, et_email;
+    private Button btn_cancel, btn_register;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) { // 액티비티 시작 시 처음으로 실행되는 생명주기
@@ -27,72 +27,65 @@ public class RegisterActivity extends AppCompatActivity{
         setContentView(R.layout.activity_register);
 
         // 아이디 값 찾기
-        e_id = findViewById(R.id.id);
-        e_pw = findViewById(R.id.pw);
-        e_name = findViewById(R.id.name);
-        e_phone = findViewById(R.id.phone);
-        e_email = findViewById(R.id.email);
+        et_id = findViewById(R.id.et_id);
+        et_pw = findViewById(R.id.et_pw);
+        et_name = findViewById(R.id.et_name);
+        et_phone = findViewById(R.id.et_phone);
+        et_email = findViewById(R.id.et_email);
 
-        cancel = findViewById(R.id.cancel);
-        cancel.setOnClickListener(new View.OnClickListener() {
+        btn_register = findViewById(R.id.btn_regitster2);
+        btn_cancel = findViewById(R.id.btn_cancel);
+        btn_cancel.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View v) {
+            public void onClick(View view){
                 finish();
+            }
+        });
+        btn_register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //EditText에 현재 입력되어있는 값을 가져옴
+                String userID = et_id.getText().toString();
+                String userPass = et_id.getText().toString();
+                String userName = et_id.getText().toString();
+                String userPhone = et_id.getText().toString();
+                String userEmail = et_id.getText().toString();
+
+                Response.Listener<String> responseListener = new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) { //서버통신 완료 알려줌
+                        try {
+                            JSONObject jsonObject = new JSONObject(response);
+                            boolean success = jsonObject.getBoolean("success");
+                            if (success) {    //회원가입 성공
+                                Toast.makeText(getApplicationContext(), "회원 가입 성공", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                                startActivity(intent);
+                            } else {  // 회원가입 실패
+                                Toast.makeText(getApplicationContext(), "회원 가입 실패", Toast.LENGTH_SHORT).show();
+                                return;
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                };
+                //서버로  volley를 이용해서 요청
+                RegisterRequest registerRequest = new RegisterRequest(userID,userPass,userName,userPhone,userEmail, responseListener);
+                RequestQueue queue = Volley.newRequestQueue(RegisterActivity.this);
+                queue.add(registerRequest);
             }
         });
     }
 
-    public void onComplete(View v){
 
-        final String id, pw, name, phone, email; // editText
-        //EditText에 현재 입력되는 값을 가져옴
-        id = e_id.getText().toString();
-        pw = e_pw.getText().toString();
-        name = e_name.getText().toString();
-        phone = e_phone.getText().toString();
-        email = e_email.getText().toString();
 
-        Response.Listener<String> responseListener = new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                //제이슨, 에이젝슨사용... 운반할때 포장해서 넘겨줌. 받을때 포장을 풀어줌:  파싱
-                Log.d(response, "----response----");
-                Log.d(id,"id");
-                Log.d(pw,"pw");
-                Log.d(name,"name");
-                Log.d(phone,"phone");
-                Log.d(email,"email");
-
-                    try {
-                        Log.d(response, "----response----");
-                        JSONObject jsonObject = new JSONObject(response);               // 성공 여부 알기위해사용
-                        Log.d(jsonObject.toString(), "----jsonObject----");
-                        boolean success = jsonObject.getBoolean("success");     // 서버통신 성공 여부 알려줌
-                        if (success) {
-                            Toast.makeText(getApplicationContext(), "회원등록 성공", Toast.LENGTH_SHORT).show();
-                            Log.e("push", "push");
-                            Intent intent = new Intent(RegisterActivity.this, logina.class);
-                            startActivity(intent);
-                        } else { // 회원등록에 실패한 경우
-                            Toast.makeText(getApplicationContext(), "회원 등록 실패", Toast.LENGTH_SHORT).show();
-                            return;
-                        }
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                        Log.d("hihi", "error");
-                    }
-            }
-        };
-        RegisterRequest registerRequest = new RegisterRequest(id, pw, name, phone, email, responseListener);
-        RequestQueue queue = Volley.newRequestQueue(RegisterActivity.this);
-        queue.add(registerRequest);
-    }
     public void hom(View v){ // 클릭이벤트. 버튼에 OnClick하고 이름을 맞춰줘야한다
         Intent intent001 = new Intent(this,MainActivity.class); // Intent라는 함수 사용법. Intent intent이름 = new Intent(this,불러올페이지이름.class)
         startActivity(intent001); // intent이름 을 시작하겠다.
     }       // 만약 추가하고싶다면 java > com.example.myapplication에 마우스 오른쪽버튼 new > activity로 추가하면됨.
     public void lo_co(View v){
-        Intent intent002 = new Intent(this,logina.class);
+        Intent intent002 = new Intent(this, LoginActivity.class);
         startActivity(intent002);
     }
     public void myp(View v){

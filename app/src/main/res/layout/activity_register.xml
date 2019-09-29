@@ -184,7 +184,7 @@
         app:layout_constraintVertical_bias="0.369" />
 
     <EditText
-        android:id="@+id/id"
+        android:id="@+id/et_id"
         android:layout_width="196dp"
         android:layout_height="30dp"
         android:layout_marginStart="8dp"
@@ -263,7 +263,7 @@
         app:layout_constraintVertical_bias="0.694" />
 
     <EditText
-        android:id="@+id/pw"
+        android:id="@+id/et_pw"
         android:layout_width="196dp"
         android:layout_height="30dp"
         android:layout_marginStart="8dp"
@@ -283,7 +283,7 @@
         app:layout_constraintVertical_bias="0.445" />
 
     <EditText
-        android:id="@+id/phone"
+        android:id="@+id/et_phone"
         android:layout_width="196dp"
         android:layout_height="30dp"
         android:layout_marginStart="8dp"
@@ -303,7 +303,7 @@
         app:layout_constraintVertical_bias="0.61" />
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/et_email"
         android:layout_width="196dp"
         android:layout_height="30dp"
         android:layout_marginStart="8dp"
@@ -323,7 +323,7 @@
         app:layout_constraintVertical_bias="0.69" />
 
     <EditText
-        android:id="@+id/name"
+        android:id="@+id/et_name"
         android:layout_width="196dp"
         android:layout_height="30dp"
         android:layout_marginStart="8dp"
@@ -342,14 +342,13 @@
         app:layout_constraintVertical_bias="0.525" />
 
     <Button
-        android:id="@+id/regitster"
+        android:id="@+id/btn_regitster2"
         android:layout_width="107dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="44dp"
         android:layout_marginBottom="8dp"
-        android:onClick="onComplete"
         android:text="확인"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -359,7 +358,7 @@
         app:layout_constraintVertical_bias="0.822" />
 
     <Button
-        android:id="@+id/cancel"
+        android:id="@+id/btn_cancel"
         android:layout_width="107dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"

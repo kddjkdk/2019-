@@ -185,7 +185,7 @@
         app:layout_constraintVertical_bias="0.4" />
 
     <EditText
-        android:id="@+id/id"
+        android:id="@+id/et_id"
         android:layout_width="204dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
@@ -243,7 +243,7 @@
         app:layout_constraintVertical_bias="0.591" />
 
     <EditText
-        android:id="@+id/pw"
+        android:id="@+id/et_pw"
         android:layout_width="204dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
@@ -279,7 +279,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/register"
+        android:id="@+id/btn_register1"
         android:layout_width="107dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"

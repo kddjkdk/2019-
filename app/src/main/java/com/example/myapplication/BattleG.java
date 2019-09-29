@@ -1,19 +1,9 @@
 package com.example.myapplication;
 
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-
-import com.example.myapplication.Communitya;
-import com.example.myapplication.MainActivity;
-import com.example.myapplication.MyPagea;
-import com.example.myapplication.Perchasea;
-import com.example.myapplication.R;
-import com.example.myapplication.Streaminga;
-import com.example.myapplication.logina;
 
 public class BattleG extends AppCompatActivity implements View.OnClickListener {
 
@@ -38,7 +28,7 @@ public class BattleG extends AppCompatActivity implements View.OnClickListener {
     }// 만약 추가하고싶다면 java > com.example.myapplication에 마우스 오른쪽버튼 new > activity로 추가하면됨.
 
     public void lo_co(View v){
-        Intent intent002 = new Intent(this, logina.class);
+        Intent intent002 = new Intent(this, LoginActivity.class);
         startActivity(intent002);
     }
     public void myp(View v){

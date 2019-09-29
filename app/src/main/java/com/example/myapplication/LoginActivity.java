@@ -15,43 +15,50 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class logina extends AppCompatActivity {
-    private EditText e_id, e_pw;
+public class LoginActivity extends AppCompatActivity {
+    private EditText et_id, et_pw;
     private Button btn_login, btn_register;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_logina);
+        setContentView(R.layout.activity_login);
 
-        e_id = findViewById(R.id.id);
-        e_pw = findViewById(R.id.pw);
-        btn_login = findViewById(R.id.Login1);
-        btn_register = findViewById(R.id.register);
+        et_id = findViewById(R.id.et_id);
+        et_pw = findViewById(R.id.et_pw);
+        btn_login = findViewById(R.id.btn_login);
+        btn_register = findViewById(R.id.btn_register1);
+
+        btn_register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
 
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view){
-                String id = e_id.getText().toString();
-                String pw = e_pw.getText().toString();
+            public void onClick(View v) {
+                String userID = et_id.getText().toString();
+                String userPass = et_id.getText().toString();
 
-                Response.Listener<String> responseListener = new Response.Listener<String>(){
+                Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         try {
-                            JSONObject jsonObject = new JSONObject(response);   // 성공 여부 알기위해사용
-                            boolean success = jsonObject.getBoolean("success");     // 서버통신 성공 여부 알려줌
-                            if (success) {
-                                 // 서버로부터 id, pw 검사
-                                String userID= jsonObject.getString("id");
-                                String userPass= jsonObject.getString("password");
+                            JSONObject jsonObject = new JSONObject(response);
+                            boolean success = jsonObject.getBoolean("success");
+                            if (success) {    // 로그인 성공
+                                String id = jsonObject.getString("userID");
+                                String pw = jsonObject.getString("userPass");
 
-                                Toast.makeText(getApplicationContext(), "로그인 성공",Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(logina.this, MainActivity.class);
-                                // 넣은 값들 가지고 다음페이지로 넘겨준다.
-                                intent.putExtra("id", userID);
-                                intent.putExtra("password", userPass);
-                            } else { // 회원등록에 실패한 경우
+                                Toast.makeText(getApplicationContext(), "로그인 성공", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                intent.putExtra("userID", id);
+                                intent.putExtra("userPass", pw);
+                                startActivity(intent);
+                            } else {  // 로그인 실패
                                 Toast.makeText(getApplicationContext(), "로그인 실패", Toast.LENGTH_SHORT).show();
                                 return;
                             }
@@ -60,8 +67,8 @@ public class logina extends AppCompatActivity {
                         }
                     }
                 };
-                LoginRequest loginRequest = new LoginRequest(id, pw, responseListener);
-                RequestQueue queue = Volley.newRequestQueue(logina.this);
+             LoginRequest loginRequest = new LoginRequest(userID, userPass, responseListener);
+                RequestQueue queue = Volley.newRequestQueue(LoginActivity.this);
                 queue.add(loginRequest);
             }
         });
@@ -74,7 +81,7 @@ public class logina extends AppCompatActivity {
 
         //메뉴 및 로그인
     public void lo_co(View v){
-        Intent intent002 = new Intent(this,logina.class);
+        Intent intent002 = new Intent(this, LoginActivity.class);
         startActivity(intent002);
     }
     public void myp(View v){
@@ -97,5 +104,4 @@ public class logina extends AppCompatActivity {
         Intent intent007 = new Intent(this, RegisterActivity.class);
         startActivity(intent007);
     }
-
 }

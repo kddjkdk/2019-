@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#093450"
-    tools:context=".logina">
+    tools:context=".LoginActivity">
 
     <ImageButton
         android:id="@+id/home"
@@ -183,7 +183,7 @@
                 tools:layout_editor_absoluteY="331dp" />
 
             <EditText
-                android:id="@+id/id"
+                android:id="@+id/et_id"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="8dp"
@@ -195,9 +195,9 @@
                 android:inputType="textPersonName"
                 android:textColor="#000000"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/pw"
+                app:layout_constraintEnd_toEndOf="@+id/et_pw"
                 app:layout_constraintHorizontal_bias="0.125"
-                app:layout_constraintStart_toStartOf="@+id/pw"
+                app:layout_constraintStart_toStartOf="@+id/et_pw"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.468" />
 
@@ -225,7 +225,7 @@
                 tools:layout_editor_absoluteY="394dp" />
 
             <EditText
-                android:id="@+id/pw"
+                android:id="@+id/et_pw"
                 android:layout_width="255dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="8dp"
@@ -258,7 +258,7 @@
         app:layout_constraintVertical_bias="0.244">
 
         <Button
-            android:id="@+id/Login1"
+            android:id="@+id/btn_login"
             android:layout_width="107dp"
             android:layout_height="40dp"
             android:layout_marginStart="8dp"
@@ -274,7 +274,7 @@
             app:layout_constraintVertical_bias="1.0" />
 
         <Button
-            android:id="@+id/register"
+            android:id="@+id/btn_register1"
             android:layout_width="107dp"
             android:layout_height="40dp"
             android:layout_marginStart="8dp"

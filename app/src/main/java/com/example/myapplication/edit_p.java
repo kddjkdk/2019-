@@ -32,7 +32,7 @@ public class edit_p extends AppCompatActivity implements View.OnClickListener {
                         .show();
                 break;
 
-            case R.id.register:
+            case R.id.btn_register1:
                 this.finish();
                 break;
         }
@@ -43,7 +43,7 @@ public class edit_p extends AppCompatActivity implements View.OnClickListener {
     }// 만약 추가하고싶다면 java > com.example.myapplication에 마우스 오른쪽버튼 new > activity로 추가하면됨.
 
     public void lo_co(View v){
-        Intent intent002 = new Intent(this,logina.class);
+        Intent intent002 = new Intent(this, LoginActivity.class);
         startActivity(intent002);
     }
     public void myp(View v){

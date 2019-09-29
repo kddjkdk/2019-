@@ -7,22 +7,22 @@ import com.android.volley.toolbox.StringRequest;
 import java.util.HashMap;
 import java.util.Map;
 
-public class LoginRequest extends StringRequest {
+public class LoginRequest extends StringRequest{
 
-    //서버 url 설정  ... php에 저장한 php파일과 연동
-    final static private String URL = "http://giantstar115.dothome.co.kr/html/Login.php";
+    //서버 url 설정 (php파일연동)
+    final static private String URL = "http://giantstar115.dothome.co.kr/Login.php";
     private Map<String, String> map;
 
-    public LoginRequest(String id, String password, Response.Listener<String> listener) {
+    public LoginRequest(String userID, String userPass, Response.Listener<String> listener){
         super(Method.POST, URL, listener, null);
-
         map = new HashMap<>();
-        map.put("id", id); // String 형태가 들어오게 값을 넣어라...
-        map.put("password", password);
+        map.put("userID", userID);
+        map.put("userPass",userPass);
     }
 
     @Override
-    protected Map<String, String> getPostParams() throws AuthFailureError {
+    protected Map<String, String> getParams() throws AuthFailureError {
         return map;
     }
+
 }

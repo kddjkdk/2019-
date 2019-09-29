@@ -18,7 +18,7 @@ public class Streaminga extends AppCompatActivity {
     }// 만약 추가하고싶다면 java > com.example.myapplication에 마우스 오른쪽버튼 new > activity로 추가하면됨.
 
     public void lo_co(View v){
-        Intent intent002 = new Intent(this,logina.class);
+        Intent intent002 = new Intent(this, LoginActivity.class);
         startActivity(intent002);
     }
     public void myp(View v){
