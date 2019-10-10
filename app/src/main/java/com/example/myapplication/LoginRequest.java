@@ -13,11 +13,11 @@ public class LoginRequest extends StringRequest{
     final static private String URL = "http://giantstar115.dothome.co.kr/Login.php";
     private Map<String, String> map;
 
-    public LoginRequest(String userID, String userPass, Response.Listener<String> listener){
+    public LoginRequest(String ID, String Pass, Response.Listener<String> listener){
         super(Method.POST, URL, listener, null);
         map = new HashMap<>();
-        map.put("userID", userID);
-        map.put("userPass",userPass);
+        map.put("userID", ID);
+        map.put("userPass",Pass);
     }
 
     @Override

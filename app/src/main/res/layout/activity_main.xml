@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="#093450"
-    >
+    android:background="#131212"
+    tools:context=".MainActivity">
     <!--<ImageButton                        이미지가 포함된 버튼, 일번버튼은 Button, TextView는 글자
     android:id="@+id/home"              개체 id(HTML에 id개념하고 같다)
     android:layout_width="110dp"        아이콘 넓이
@@ -22,144 +21,12 @@
     app:layout_constraintTop_toTopOf="parent" 4 1,2,3,4 이거는 뭘 뜻하는지는 모르는데 아이콘 위치 옮기려면 필수다. 꼭 넣어라
     app:layout_constraintVertical_bias="0.0" />  0~1까지 세로 위치를 비율로 따짐(0.5에 있으면 세로 가운데 위치한거)
 -->
-    <ImageButton
-        android:id="@+id/home"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:padding="0sp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/logo"
-        android:onClick="hom"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
- <!--
-    <Button
-        android:id="@+id/login_com"
-        android:layout_width="89dp"
-        android:layout_height="20dp"
-        android:layout_margin="0dp"
-        android:background="#0F6796"
-        android:text="로그인/회원가입"
-        android:textColor="#FFFFFF"
-        android:textSize="25px"
-        android:textStyle="bold"
-        android:onClick="lo_co"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.95"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05" />
- -->
-
-    <Button
-        android:id="@+id/login_com3"
-        android:layout_width="89dp"
-        android:layout_height="20dp"
-        android:layout_margin="0dp"
-        android:background="#FFFFFF"
-        android:textColor="#FFFFFF"
-        android:textSize="25px"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.857"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.1" />
-
-    <Button
-        android:id="@+id/login_com2"
-        android:layout_width="30dp"
-        android:layout_height="20dp"
-        android:layout_margin="0dp"
-        android:background="#0F6796"
-        android:text="검색"
-        android:textColor="#FFFFFF"
-        android:textSize="25px"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.958"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.1" />
-
-    <Button
-        android:id="@+id/Mypage"
-        android:layout_width="102.75dp"
-        android:layout_height="55dp"
-        android:background="#0F6796"
-        android:backgroundTintMode="add"
-        android:text="마이페이지"
-
-        android:textColor="#FFFFFF"
-        android:textSize="35px"
-        android:textStyle="bold"
-
-        android:onClick="myp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.201" />
-
-    <Button
-        android:id="@+id/Streaming"
-        android:layout_width="102.75dp"
-        android:layout_height="55dp"
-        android:background="#0F6796"
-        android:text="스트리밍"
-        android:textColor="#FFFFFF"
-        android:textSize="35px"
-        android:textStyle="bold"
-        android:onClick="stream"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.334"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.201" />
-
-    <Button
-        android:id="@+id/persrec"
-        android:layout_width="102.75dp"
-        android:layout_height="55dp"
-        android:background="#0F6796"
-        android:text="구매/추천"
-        android:textColor="#FFFFFF"
-        android:textSize="35px"
-        android:textStyle="bold"
-        android:onClick="Pers"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.668"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.201" />
-
-    <Button
-        android:id="@+id/comu"
-        android:layout_width="102.75dp"
-        android:layout_height="55dp"
-        android:background="#0F6796"
-        android:text="커뮤니티"
-        android:textColor="#FFFFFF"
-        android:textSize="35px"
-        android:textStyle="bold"
-        android:onClick="comu"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.201" />
+    <include
+    android:id="@+id/top"
+    android:layout_width="match_parent"
+    android:layout_heght="wrap_content"
+    layout="@layout/include_top"
+    />
 
     <TextView
         android:layout_width="79dp"
@@ -207,10 +74,10 @@
         android:id="@+id/wi1"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:onClick="bag"
         android:padding="0sp"
         android:scaleType="centerCrop"
         android:src="@drawable/ba"
-        android:onClick="bag"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.947"
@@ -274,7 +141,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.86" />
-
 
 
     <android.support.constraint.Barrier
